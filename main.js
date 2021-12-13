@@ -1,6 +1,14 @@
 
 
 // sem začni psát svůj program ******************************************************
+// 0. zavedení proměnné                  mince
+// 1. definování rozměru (šířka, výška)  mince.height
+// 2. definování pozice (x, y)           minceX = random+inner+window
+// 3. zavedení fce (pozicuje)            mince.style.left = minceX+px
+// 4. nastavení hudby+podmínky pro 4 směry (key a o kolik, nastavení <0 =0, aby neodešel z window)
+// + fce umistiPanacka + fce otestujKolizi
+// 5. otestujKolizi + novaMince() + zvukMince.play() + zvysScore()
+// 6. zvysScore
 
 let panacek, panacekX, panacekY, panacekVyska, panacekSirka;
 let mince, minceX, minceY, minceSirka, minceVyska;
@@ -49,7 +57,7 @@ function priStisknutiKlavesy(udalost) {
 
 	if(!musicPlay) {
 		document.querySelector('#hudba').play();
-		hrajeHudba = true;
+		musicPlay = true;
 	}
 
 
